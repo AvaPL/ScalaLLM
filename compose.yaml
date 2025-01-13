@@ -1,0 +1,9 @@
+services:
+  jupyter-scala:
+    container_name: scalallm-jupyter-scala
+    build:
+      context: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./workspace:/workspace

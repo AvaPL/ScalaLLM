@@ -1,2 +1,5 @@
 /.idea/
 /ScalaLLM.iml
+
+# Temp Jupyter directories
+/workspace/.*/
