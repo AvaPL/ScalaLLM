@@ -2,6 +2,9 @@
 
 An attempt to implement an LLM in Scala from scratch.
 
+The ideas and code are based on
+[Build a Large Language Model (From Scratch)](https://www.manning.com/books/build-a-large-language-model-from-scratch).
+
 ## Running locally
 
 To run locally, use:
