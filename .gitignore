@@ -2,5 +2,5 @@
 /ScalaLLM.iml
 
 # Temp Jupyter directories
-/.Thrash-0/
-/**/.ipynb_checkpoints/
+/workspace/.Trash-0/
+/workspace/**/.ipynb_checkpoints/
