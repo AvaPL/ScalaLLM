@@ -29,7 +29,8 @@ related files) should be saved in this directory.
 
 Python modules can be installed from within a notebook using:
 ```scala
-import $file.Magic
+import $file.Magic // when in the same folder as Magic.sc
+// import $file.^.Magic // when Magic.sc is in the parent folder
 
 Magic.!("pip", "install", "torch==2.5.*")
 ```
