@@ -1,10 +1,13 @@
 ARG PYTHON_VERSION=3.12
 FROM python:${PYTHON_VERSION}-slim
 
-# Install curl and Java
-ARG OPENJDK_VERSION=17
+# Install JupyterLab
+RUN pip install jupyterlab
+
+# Install curl and Java Runtime
+ARG JRE_VERSION=17
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl openjdk-${OPENJDK_VERSION}-jdk && \
+    apt-get install -y --no-install-recommends curl openjdk-${JRE_VERSION}-jre-headless && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -16,9 +19,6 @@ RUN curl -Lo coursier https://git.io/coursier-cli && \
     ./coursier launch almond:${ALMOND_VERSION} --scala ${SCALA_VERSION} -- \
       --install --display-name "Scala ${SCALA_VERSION}" && \
     rm -f coursier
-
-# Install JupyterLab
-RUN pip install jupyterlab
 
 WORKDIR /workspace
 
