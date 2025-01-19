@@ -27,6 +27,17 @@ code on the server.
 Notebooks are stored in the `workspace` directory and are mounted into the Jupyter container. Notebooks (and their
 related files) should be saved in this directory.
 
-Python modules can be used from Scala code via [ScalaPy](https://github.com/scalapy/scalapy). Every Python module should
-be added to the `requirements.txt` file. Changes require running `docker-compose up --build -d` again (Almond doesn't
-allow using `!pip ...` within notebooks). Remember to save everything before the restart.
+Python modules can be installed from within a notebook using:
+```scala
+import $file.Magic
+
+Magic.!("pip", "install", "torch==2.5.*")
+```
+
+Python modules can be used from Scala code via [ScalaPy](https://github.com/scalapy/scalapy):
+```scala
+import $ivy.`dev.scalapy::scalapy-core:0.5.3`
+import me.shadaj.scalapy.py
+
+val torch = py.module("torch")
+```

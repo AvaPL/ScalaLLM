@@ -22,11 +22,6 @@ RUN pip install jupyterlab
 
 WORKDIR /workspace
 
-# Install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt && \
-    rm -f requirements.txt
-
 # Start JupyterLab (note: allow-root is unsafe, don't use it in production)
 EXPOSE 8888
 CMD ["jupyter", "lab", "--allow-root", "--ip=0.0.0.0"]
