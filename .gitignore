@@ -4,3 +4,6 @@
 # Temp Jupyter directories
 /workspace/.Trash-0/
 /workspace/**/.ipynb_checkpoints/
+
+# Saved models
+/workspace/**/*.pth
