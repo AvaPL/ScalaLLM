@@ -7,3 +7,4 @@
 
 # Saved models
 /workspace/**/*.pth
+/workspace/chapter5/data/openai124M/
