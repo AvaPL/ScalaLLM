@@ -4,10 +4,14 @@ FROM python:${PYTHON_VERSION}-slim
 # Install JupyterLab
 RUN pip install jupyterlab
 
-# Install curl and Java Runtime
+# Install Java Runtime and other utils
 ARG JRE_VERSION=17
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl openjdk-${JRE_VERSION}-jre-headless && \
+    apt-get install -y --no-install-recommends \
+      openjdk-${JRE_VERSION}-jre-headless \
+      curl \
+      unzip \
+      && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
