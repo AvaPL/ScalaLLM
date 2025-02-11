@@ -8,6 +8,7 @@
 # Saved models
 /workspace/**/*.pth
 /workspace/chapter5/data/openai124M/
+/workspace/chapter6/data/openai124M/
 
-# Chapter 6 raw dataset
+# Chapter 6 dataset
 /workspace/chapter6/data/sms-spam-raw/
