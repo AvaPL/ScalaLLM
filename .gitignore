@@ -16,3 +16,6 @@
 # Chapter 6 dataset
 /workspace/chapter6/data/sms-spam-raw/
 /workspace/chapter6/data/*.csv
+
+# Chapter 7 dataset
+/workspace/chapter7/data/instruction-data-raw/instruction-data.json
